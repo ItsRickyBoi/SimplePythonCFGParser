@@ -91,39 +91,6 @@ def print_table(parsing_table):
     print('\n'.join(table))
 
 
-parse_table = {
-    'S': {
-        'x': 'AB',
-        'y': 'AB',
-        'a': 'CD',
-        'b': 'CD',
-    },
-    'A': {
-        'x': 'xA',
-        'y': 'y',
-        'a': '-',
-        'b': '-',
-    },
-    'B': {
-        'x': 'x',
-        'y': 'yB',
-        'a': '-',
-        'b': '-',
-    },
-    'C': {
-        'x': '-',
-        'y': '-',
-        'a': 'aD',
-        'b': 'b',
-    },
-    'D': {
-        'x': '-',
-        'y': '-',
-        'a': 'a',
-        'b': 'bC',
-    },
-}
-
 grammar_rules = [
     "S -> AB | CD",
     "A -> xA | y",
@@ -137,7 +104,7 @@ for rule in grammar_rules:
     print(rule + "\n")
 
 print('Parsing Table:')
-print_table(parse_table)
+print_table(parsing_table)
 input_string = input('Enter the input string: ')
 
 if not input_string.endswith("#"):
